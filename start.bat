@@ -1,5 +1,5 @@
 @echo off
-title Learning Dashboard
+title SelfBank
 cd /d "%~dp0"
 
 echo ==============================
@@ -17,11 +17,14 @@ call venv\Scripts\activate.bat
 echo.
 echo ==============================
 echo   Server starting...
-echo   Open: http://localhost:5000
+echo   Open: http://selfbank.localhost:5000
 echo   Press Ctrl+C to stop
 echo ==============================
 echo.
 
-start http://localhost:5000
-python app.py
+start /b python app.py
+echo   Waiting for server to start...
+timeout /t 3 /nobreak >nul
+start http://selfbank.localhost:5000
+echo   Server is running. Press Ctrl+C to stop.
 pause
