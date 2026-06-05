@@ -127,7 +127,3 @@ self-improvement/
 | GET | `/api/export` | 导出所有数据 |
 | POST | `/api/import` | 导入数据 |
 | POST | `/api/clear` | 清空所有数据 |
-
-## 📝 License
-
-MIT
